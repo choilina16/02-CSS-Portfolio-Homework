@@ -10,7 +10,7 @@ The assignment is to do the following for a html and css file with no starting c
   * responsive layout
 
 ## Visuals to Personal Deployed Page
-![02-CSS-Portfolio-Homework-Lina](https://user-images.githubusercontent.com/100983245/159594733-e995d8ca-04e4-4ff2-b2ef-9cf9ba8f2789.png)
+![02-CSS-Portfolio-Homework-Lina](https://user-images.githubusercontent.com/100983245/159594905-94f5aaf0-2d0b-43a7-ac7d-7b4edb367990.png)
 
 ## Link to Deployed Page
 [Deployed Github Page](https://choilina16.github.io/02-CSS-Portfolio-Homework/)

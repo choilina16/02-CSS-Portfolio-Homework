@@ -5,6 +5,10 @@
     --main-blue: rgb(182, 219, 231);
 }
 
+body, html {
+    height: 100%;
+}
+
 /* body*/
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -54,140 +58,135 @@ header nav ul li a {
 }
 
 /* main image of the page. Image found on unsplash.com*/
-#main-image {
-    background-image: url("../images/main-image.jpg");
+.main-image {
+    background: url("../images/main-image.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    padding: 150px;
-}
-
-#main-image h2 {
-    background-color: var(--main-blue);
-    font-size: 30px;
-    padding: 10px;
-    width: 330px;
     position: relative;
-    top: 100px;
-    left: 1000px;
-    font-weight: bold;
-} 
-
-/* main section of page with about me section */
-.main-section {
-    margin: 25px 0;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-between;
 }
 
-.about-me h2 {
-    text-align: left;
+.main-image-text {
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    left: 80%;
+    color: var(--dark);
+    background-color: var(--main-blue);
+    font-weight: bold;
+    line-height: 3;
+    font-size: 25px;
+}
+
+/* About me section */
+.about-me-container {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.about-me-container > h2 {
     font-size: 60px;
     line-height: 1;
-    border-right: 6px solid black;
-    height: 200px;
-    position: absolute;
-    left: 5%;
+    border-right: 6px solid var(--dark);
+    align-items: center;
+    padding: 0 10px;
 }
 
-.about-me p {
-    padding: 1.5% 0 0 400px;
-    text-align: center;
+.about-me-contents {
     font-size: 20px;
+    padding: 0 30px;
 }
 
 /* projects section of the page */
-.projects {
-    display: flex;
-    flex: 4;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+.projects  {
+    align-items: center;
+    padding: 50px 0;
 }
 
-.projects h2 {
-    text-align: left;
+/* cannot get the border to show when I have display:grid... */
+.projects > h2 {
     font-size: 60px;
     line-height: 1;
-    border-right: 6px solid black;
-    height: 200px;
-    position: absolute;
-    left: 7.1%;
-    margin-top: 10%;
+    border-right: 6px solid var(--dark);
+    align-items: center;
+    padding: 0 10px;
 }
 
-.projects-images-section {
+/* making the grid for the pictures...not sure if it's the best way */
+.images-container {
+    display: grid;
+    /* repeating grid columns 2 times */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0 20%;
+}
+
+/* in images-container but targeting div */
+.images-container > a {
+    height: 400px;
+    background-size: cover;
+
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+
+    color: var(--main-blue);
+    font-size: 20px;
+    border: 5px solid var(--main-blue);
 }
 
-/* Images for the Projects section. All photos found on unsplash.com */
-.project-img-1 {
-    background-image: url("../images/project-img-1.jpg");
-    background-size: 100%;
-    border-color: var(--main-blue);
-    border-style: solid;
-    border-width: 7px;
-    height: 300px;
-    width: 1000px;
+/* using peusdo element nth-of-type, 1st photo is spanning over all columns */
+.images-container > a:nth-of-type(1) {
+    grid-column: 1 / 3;
 }
 
-.project-img-2 {
-    background-image: url("../images/project-img-2.jpg");
-    background-size: 100%;
-    border-color: var(--main-blue);
-    border-style: solid;
-    border-width: 7px;
-    height: 200px;
-    width: 500px;
-}
- 
-.project-img-3 {
-    background-image: url("../images/project-img-3.jpg");
-    background-size: 100%;
-    border-color: var(--main-blue);
-    border-style: solid;
-    border-width: 7px;
-    height: 200px;
-    width: 500px;
+.images-container > a:hover {
+    opacity: 0.3;
 }
 
-.project-img-1:hover {
-    background-color: var(--light);
+/* url to the pictures used in the projects section. all photos found on unsplash.com */
+.projects-image-1 {
+    background: url("../images/project-img-1.jpg");
+}
+
+.projects-image-2 {
+    background: url("../images/project-img-2.jpg");     
+}
+
+.projects-image-3 {
+    background: url("../images/project-img-3.jpg");     
+}
+
+.projects-image-4 {
+    background: url("../images/project-img-4.jpg");     
+}
+
+.projects-image-5 {
+    background: url("../images/project-img-5.jpg");     
 }
 
 /* contact me section */
 .contact-me {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
-    height: 100%;
+    padding: 50px 0;
 }
 
-.contact-me h2 {
-    text-align: left;
+.contact-me > h2 {
     font-size: 60px;
     line-height: 1;
-    border-right: 6px solid black;
-    height: 200px;
-    position: absolute;
-    left: 2%;
+    border-right: 6px solid var(--dark);
+    align-items: center;
+    padding: 0 10px;    
 }
 
-.contact-me a {
-    font-size: 30px;
-    margin-top: 15%;
-    display: relative;
-}
+.contact-me-contents {
+    font-size: 20px;
+    padding: 0 30px;
 
-/* media screen to have website more mobile responsive */
-@media screen and (max-width: 800px) {
-    main,
-    nav {
-      flex-direction: column;
-    }
-  }
+}

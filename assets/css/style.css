@@ -188,5 +188,12 @@ header nav ul li a {
 .contact-me-contents {
     font-size: 20px;
     padding: 0 30px;
-
 }
+
+/* media screen to have website more mobile responsive */
+@media screen and (max-width: 800px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+  }

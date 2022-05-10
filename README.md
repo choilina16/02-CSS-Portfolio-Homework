@@ -13,7 +13,7 @@ The assignment is to do the following for a html and css file with no starting c
 ![02-CSS-Portfolio-Homework-Lina](https://user-images.githubusercontent.com/100983245/159594905-94f5aaf0-2d0b-43a7-ac7d-7b4edb367990.png)
 
 ## Link to Deployed Page
-[Deployed Github Page](https://choilina16.github.io/02-CSS-Portfolio-Homework/)
+[Deployed Github Page](https://choilina16.github.io/Lina-Portfolio/)
 
 ## Link to Github Repository 
 [Github Repository](https://github.com/choilina16/02-CSS-Portfolio-Homework) 
